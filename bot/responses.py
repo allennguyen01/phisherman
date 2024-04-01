@@ -16,8 +16,7 @@ def get_response(user_input: str) -> str:
     elif 'roll dice' in lowered:
         return f'You rolled: {randint(1, 6)}'
     elif '/spam' in lowered:
-        label, percent = analyze_output(user_input.replace('/spam', ''))
-        return f'This message is {'{:.2f}'.format(percent * 100)}% likely to be {'spam' if label == 1 else 'not spam'}'
+        return analyze_output(user_input.replace('/spam', ''))
     else:
         return choice(['I do not understand...',
                        'What are you talking about?',
