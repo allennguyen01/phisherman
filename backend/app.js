@@ -43,7 +43,7 @@ async function generatePhishermanResponse(spamScore, discordMessage) {
 	return completion.choices[0].message.content;
 }
 
-// Start the server
+// Start the server	
 app.listen(port, () => {
 	console.log(`Server is running on port ${port}`);
 });
